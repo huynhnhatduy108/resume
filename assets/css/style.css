@@ -407,21 +407,66 @@ img{
     border:2px solid var(--fisrt-color);
     border-radius: 0.5rem;
     text-align: center;
+    position: relative;
 }
 
-.services__icon{
-    font-size:2rem;
-    padding:0.5rem;
-    background-color:var(--fisrt-color);
-    color:var(--fisrt-color-lighten);
-    border-radius:50%;
+.services__html-icon{
+    font-size:4rem;
+    color:#264EE4;
     margin-bottom: var(--mb-2);
 }
+.services__css-icon{
+    font-size:4rem;
+    color:#E34D2B;
+    margin-bottom: var(--mb-2);
+}
+
+.services__javascript-icon{
+    font-size:4rem;
+    color:#F3DE2B;
+    margin-bottom: var(--mb-2);
+}
+
+.services__react-icon{
+    font-size:4rem;
+    color:#09D9FE;
+    margin-bottom: var(--mb-2);
+}
+
+.services__node-icon{
+    font-size:4rem;
+    color:#539E43;
+    margin-bottom: var(--mb-2);
+}
+
+.services__bootstrap-icon{
+    font-size:4rem;
+    color:#870AFB;
+    margin-bottom: var(--mb-2);
+}
+
+.services__antd-icon{
+    font-size:4rem;
+    color:#F63342;
+    margin-bottom: var(--mb-2);
+}
+
+.services__git-icon{
+    font-size:4rem;
+    color:#F05033;
+    margin-bottom: var(--mb-2);
+}
+
+.services__sourcetree-icon{
+    font-size:3.8rem;
+    color:#003366;
+    margin-bottom: var(--mb-2);
+}
+
 
 .services__title{
     font-size:1.25rem;
     color: var(--fisrt-color-dark);
-    margin-bottom:var(--mb-1);
 }
 
 .services__content, .services__icon, .services__title,.services__description{
@@ -431,15 +476,28 @@ img{
     background-color:var(--fisrt-color);
 }
 
-.services__content:hover .services__icon{
-    background-color:var(--fisrt-color-lighten);
-    color: var(--fisrt-color);
-}
-
-.services__content:hover .services__title{
+.services__content:hover .services__html-icon, 
+.services__content:hover .services__css-icon,
+.services__content:hover .services__javascript-icon,
+.services__content:hover .services__react-icon,
+.services__content:hover .services__node-icon,
+.services__content:hover .services__bootstrap-icon,
+.services__content:hover .services__antd-icon,
+.services__content:hover .services__git-icon,
+.services__content:hover .services__sourcetree-icon{
     color: var(--fisrt-color-lighten);
 }
-.services__content:hover .services__description{
+
+/* .services__css-icon
+.services__javascript-icon
+.services__react-icon
+.services__node-icon
+.services__bootstrap-icon
+.services__antd-icon
+.services__git-icon
+.services__sourcetree-icon */
+
+.services__content:hover .services__title{
     color: var(--fisrt-color-lighten);
 }
 
