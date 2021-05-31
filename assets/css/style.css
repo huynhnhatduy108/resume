@@ -201,8 +201,6 @@ img {
   text-align: center;
 }
 .home__img {
-  padding-top: 1.3rem;
-  padding-left: 0.8rem;
   width: 160px;
   height: 160px;
   background-color: var(--fisrt-color);
@@ -211,7 +209,7 @@ img {
   margin-top: var(--mb-2);
 }
 .home__img img {
-  width: 155px;
+  width: 160px;
 }
 
 .home__title {
@@ -532,9 +530,14 @@ img {
   margin-bottom: var(--mb-4);
 }
 
-.project__img {
-  width: 220px;
-  justify-self: center;
+.project__qr {
+  text-align: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
 }
 
 /* WORKS */

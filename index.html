@@ -19,6 +19,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- QR CODE -->
+    <script type="text/javascript" src="./assets/js/qrcode.min.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -105,7 +107,7 @@
       <!-- ABOUT -->
       <section class="about section" id="about">
         <span class="section-subtitle">My intro</span>
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">ABOUT ME</h2>
         <div class="about__container bd-grid">
           <div class="about__data">
             <p class="about__description">
@@ -270,7 +272,9 @@
             </p>
             <a href="#contact" class="button button__light">Contact me</a>
           </div>
-          <img src="./assets/img/projectmind.png" alt="" class="project__img" />
+          <div class="project__qr">
+            <div id="id-qrcode"></div>
+          </div>
         </div>
       </section>
 
@@ -298,7 +302,7 @@
                 & CSS, React Hook, Redux, Redux Saga, Ant Design.
               </p>
               <a
-                href="https://www.youtube.com/watch?v=7htaXIXAVjY"
+                href="https://github.com/huynhnhatduy108/react-cms-film"
                 class="works__link"
                 ><i class="bx bx-link"></i
               ></a>
@@ -312,7 +316,11 @@
                 <span style="font-weight: bold">Technology:</span> ReactJS, HTML
                 & CSS, React Hook, Redux, Redux Saga, Ant Design.
               </p>
-              <a href="#" class="works__link"><i class="bx bx-link"></i></a>
+              <a
+                href="https://github.com/huynhnhatduy108/node-api-film"
+                class="works__link"
+                ><i class="bx bx-link"></i
+              ></a>
             </div>
           </div>
           <div class="works__img">
@@ -323,7 +331,11 @@
                 <span style="font-weight: bold">Technology:</span> ReactJS, HTML
                 & CSS, React Hook, Redux, Redux Saga, Ant Design.
               </p>
-              <a href="#" class="works__link"><i class="bx bx-link"></i></a>
+              <a
+                href="https://github.com/huynhnhatduy108/blog-app"
+                class="works__link"
+                ><i class="bx bx-link"></i
+              ></a>
             </div>
           </div>
           <div class="works__img">
@@ -334,7 +346,11 @@
                 <span style="font-weight: bold">Technology:</span> HTML & CSS,
                 JavaScript
               </p>
-              <a href="#" class="works__link"><i class="bx bx-link"></i></a>
+              <a
+                href="https://github.com/huynhnhatduy108/UdemyCourse"
+                class="works__link"
+                ><i class="bx bx-link"></i
+              ></a>
             </div>
           </div>
           <div class="works__img">
@@ -345,7 +361,11 @@
                 <span style="font-weight: bold">Technology:</span> HTML & CSS,
                 JavaScript, JQuery
               </p>
-              <a href="#" class="works__link"><i class="bx bx-link"></i></a>
+              <a
+                href="https://github.com/huynhnhatduy108/resume"
+                class="works__link"
+                ><i class="bx bx-link"></i
+              ></a>
             </div>
           </div>
           <div class="works__img">
@@ -355,7 +375,11 @@
               <p class="works__description">
                 <span style="font-weight: bold">Technology:</span> HTML & CSS
               </p>
-              <a href="#" class="works__link"><i class="bx bx-link"></i></a>
+              <a
+                href="https://github.com/huynhnhatduy108/MovieLayout"
+                class="works__link"
+                ><i class="bx bx-link"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -395,15 +419,26 @@
         <span class="section-subtitle">Contact Me</span>
         <h2 class="section-title">GET IN TOUCH</h2>
         <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
+          <form action="POST" class="contact__form" name="google-sheet">
             <div class="contact__inputs">
               <input
                 type="text"
                 placeholder="Your Name"
+                name="name"
                 class="contact__input"
               />
-              <input type="text" placeholder="Email" class="contact__input" />
-              <input type="text" placeholder="Phone" class="contact__input" />
+              <input
+                type="text"
+                placeholder="Email"
+                class="contact__input"
+                name="email"
+              />
+              <input
+                type="text"
+                placeholder="Phone"
+                class="contact__input"
+                name="phone"
+              />
             </div>
             <textarea
               name=""
@@ -412,8 +447,15 @@
               rows="10"
               placeholder="Message"
               class="contact__input"
+              name="message"
             ></textarea>
-            <input type="submit" value="Send" class="button contact__button" />
+            <input
+              type="submit"
+              value="Send"
+              onclick="onSumit()"
+              name="submit"
+              class="button contact__button"
+            />
           </form>
           <div>
             <div class="contact__info">
@@ -437,7 +479,7 @@
     <!-- FOOTER -->
     <footer class="footer section">
       <div class="footer__container bd-grid">
-        <h1 class="footer__title">Nhat Duy</h1>
+        <h1 class="footer__title">HUYNH NHAT DUY</h1>
         <p class="footer__description">
           I am Nhat Duy and this is my personal website.
         </p>
@@ -452,5 +494,17 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <!-- <script type="text/javascript">
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwCt8Nx7CECpb0LhqhJIQFQasTPCLyWTATaXsc3rYc3ZScB2FwX-Bv44hq_BNznuO8I_A/exec";
+              const form = document.forms['google-sheet'];
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => alert("You have successfully submitted."))
+                  .catch(error => console.error('Error!', error.message))
+              })
+    </script> -->
   </body>
 </html>
