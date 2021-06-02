@@ -371,12 +371,12 @@
           <div class="works__img">
             <img src="./assets/img/work6.jpg" />
             <div class="works__data">
-              <span class="works__title">Movie Layout</span>
+              <span class="works__title">Shopee Responsive</span>
               <p class="works__description">
                 <span style="font-weight: bold">Technology:</span> HTML & CSS
               </p>
               <a
-                href="https://github.com/huynhnhatduy108/MovieLayout"
+                href="https://github.com/huynhnhatduy108/responsiveshop"
                 class="works__link"
                 ><i class="bx bx-link"></i
               ></a>
@@ -495,16 +495,44 @@
 
     <script src="assets/js/main.js"></script>
 
-    <!-- <script type="text/javascript">
-      const scriptURL = "https://script.google.com/macros/s/AKfycbwCt8Nx7CECpb0LhqhJIQFQasTPCLyWTATaXsc3rYc3ZScB2FwX-Bv44hq_BNznuO8I_A/exec";
-              const form = document.forms['google-sheet'];
-            
-              form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                  .then(response => alert("You have successfully submitted."))
-                  .catch(error => console.error('Error!', error.message))
-              })
-    </script> -->
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "1775984999157037");
+      chatbox.setAttribute("attribution", "biz_inbox");
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v10.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- form submit -->
+    <script type="text/javascript">
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwCt8Nx7CECpb0LhqhJIQFQasTPCLyWTATaXsc3rYc3ZScB2FwX-Bv44hq_BNznuO8I_A/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => alert("You have successfully submitted."))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
