@@ -46,17 +46,18 @@ function scrollActive() {
 }
 
 function onSumit() {
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbwCt8Nx7CECpb0LhqhJIQFQasTPCLyWTATaXsc3rYc3ZScB2FwX-Bv44hq_BNznuO8I_A/exec";
-  const form = document.forms["google-sheet"];
-  // console.log(FormData(form));
+  alert("You have successfully sent.");
+  // const scriptURL =
+  //   "https://script.google.com/macros/s/AKfycbwCt8Nx7CECpb0LhqhJIQFQasTPCLyWTATaXsc3rYc3ZScB2FwX-Bv44hq_BNznuO8I_A/exec";
+  // const form = document.forms["google-sheet"];
+  // // console.log(FormData(form));
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => alert("You have successfully submitted."))
-      .catch((error) => console.error("Error!", error.message));
-  });
+  // form.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  //   fetch(scriptURL, { method: "POST", body: new FormData(form) })
+  //     .then((response) => alert("You have successfully submitted."))
+  //     .catch((error) => console.error("Error!", error.message));
+  // });
 }
 
  // QR CODE

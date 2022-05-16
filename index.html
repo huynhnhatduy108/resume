@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- QR CODE -->
     <script type="text/javascript" src="./assets/js/qrcode.min.js"></script>
   </head>
@@ -47,7 +48,7 @@
               <a href="#education" class="nav__link">Education</a>
             </li>
             <li class="nav__item">
-              <a href="#services" class="nav__link">Technical Skills</a>
+              <a href="#technicalskill" class="nav__link">Technical Skills</a>
             </li>
             <li class="nav__item">
               <a href="#project" class="nav__link">More info</a>
@@ -71,7 +72,7 @@
         <div class="home__container bd-grid">
           <div class="home__data">
             <div class="home__img">
-              <img src="./assets/img/perfil.png" alt="" />
+              <img src="./assets/img/user.jpg" alt="" />
             </div>
             <h1 class="home__title">HUYNH NHAT DUY</h1>
             <span class="home__professional">Frontend Developer</span>
@@ -222,7 +223,7 @@
       </section>
 
       <!-- SERVICES -->
-      <section class="services section" id="services">
+      <section class="technicalskill section" id="technicalskill">
         <span class="section-subtitle"
           >Languages, Frameworks and Platforms</span
         >
@@ -294,7 +295,7 @@
         </div>
         <div class="works__container bd-grid">
           <div class="works__img">
-            <img src="./assets/img/work1.jpg" />
+            <img src="./assets/img/project8.png" />
             <div class="works__data">
               <span class="works__title">React CMS Film</span>
               <p class="works__description">
@@ -309,7 +310,7 @@
             </div>
           </div>
           <div class="works__img">
-            <img src="./assets/img/work2.jpg" />
+            <img src="./assets/img/project5.png" />
             <div class="works__data">
               <span class="works__title">Node API Film</span>
               <p class="works__description">
@@ -324,7 +325,7 @@
             </div>
           </div>
           <div class="works__img">
-            <img src="./assets/img/work3.jpg" />
+            <img src="./assets/img/project10.png" />
             <div class="works__data">
               <span class="works__title">Blog App</span>
               <p class="works__description">
@@ -339,7 +340,7 @@
             </div>
           </div>
           <div class="works__img">
-            <img src="./assets/img/work4.jpg" />
+            <img src="./assets/img/project9.png" />
             <div class="works__data">
               <span class="works__title">Udemy Course</span>
               <p class="works__description">
@@ -354,7 +355,7 @@
             </div>
           </div>
           <div class="works__img">
-            <img src="./assets/img/work5.jpg" />
+            <img src="./assets/img/project6.png" />
             <div class="works__data">
               <span class="works__title">Resume</span>
               <p class="works__description">
@@ -369,15 +370,13 @@
             </div>
           </div>
           <div class="works__img">
-            <img src="./assets/img/work6.jpg" />
+            <img src="./assets/img/project4.png" />
             <div class="works__data">
               <span class="works__title">Shopee Responsive</span>
               <p class="works__description">
                 <span style="font-weight: bold">Technology:</span> HTML & CSS
               </p>
-              <a
-                href="https://github.com/huynhnhatduy108/responsiveshop"
-                class="works__link"
+              <a href="./shopee.html" class="works__link"
                 ><i class="bx bx-link"></i
               ></a>
             </div>
@@ -419,25 +418,28 @@
         <span class="section-subtitle">Contact Me</span>
         <h2 class="section-title">GET IN TOUCH</h2>
         <div class="contact__container bd-grid">
-          <form action="POST" class="contact__form" name="google-sheet">
+          <form method="post" class="contact__form" name="google-sheet">
             <div class="contact__inputs">
               <input
                 type="text"
                 placeholder="Your Name"
                 name="name"
                 class="contact__input"
+                required
               />
               <input
                 type="text"
                 placeholder="Email"
                 class="contact__input"
                 name="email"
+                required
               />
               <input
                 type="text"
                 placeholder="Phone"
                 class="contact__input"
                 name="phone"
+                required
               />
             </div>
             <textarea
@@ -448,14 +450,12 @@
               placeholder="Message"
               class="contact__input"
               name="message"
+              required
             ></textarea>
-            <input
-              type="submit"
-              value="Send"
-              onclick="onSumit()"
-              name="submit"
-              class="button contact__button"
-            />
+            <div id="msg"></div>
+            <button onclick="onSumit()" class="button contact__button">
+              Send
+            </button>
           </form>
           <div>
             <div class="contact__info">
@@ -522,17 +522,5 @@
     </script>
 
     <!-- form submit -->
-    <script type="text/javascript">
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwCt8Nx7CECpb0LhqhJIQFQasTPCLyWTATaXsc3rYc3ZScB2FwX-Bv44hq_BNznuO8I_A/exec";
-      const form = document.forms["google-sheet"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => alert("You have successfully submitted."))
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
   </body>
 </html>
